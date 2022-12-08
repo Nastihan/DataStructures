@@ -22,18 +22,21 @@ public:
 	// Constructor
 	Array(int size)
 		: size{ size }, length{ 0 }, arr{ new T[size] } {
+		
 	}
 	// Copy constructor
 	Array(const Array<T>& source)
-		: size{ source.size }, length{ source.length }, arr{ new T[size] } {
+		: size{ source.size }, length{ source.length }, arr{ new T[source.size] } {
 		for (int i{}; i < length; i++)
 			arr[i] = source.arr[i];
 
 	}
 	// Move constructor
-	Array(const Array<T>&& source)
+	Array( Array<T>&& source)
 		: size{ source.size }, length{ source.length }, arr{ source.arr } {
 		source.arr = nullptr;
+		std::cout << "hey";
+
 	}
 	// Destructor
 	~Array() { delete[] arr; }
@@ -128,25 +131,6 @@ public:
 		if (index >= 0 && index < length)
 			arr[index] = x;
 	}
-	/* Max method
-	T Max() {
-		T max{ arr[0] };
-		for (int i{1};i < length;i++) {
-			if(arr[i] > max)
-				max = arr[i];
-		}
-		return max;
-	}
-	// Min method
-	T Min() {
-		T min{ arr[0] };
-		for (int i{ 1 }; i < length;i++) {
-			if (arr[i] < min)
-				min = arr[i];
-		}
-		return min;
-	}
-	*/
 	// Reverse method
 	void Reverse() {
 		int i, j;
@@ -156,7 +140,6 @@ public:
 			arr[i] = arr[j];
 			arr[j] = temp;
 		}
-
 	}
 	
 
