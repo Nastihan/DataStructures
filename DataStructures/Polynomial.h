@@ -27,8 +27,8 @@ public:
 		}
 	}
 	// Result method
-	int Result(int x) {
-		int sum{};
+	double Result(int x) {
+		double sum{};
 		for (int i{}; i < n;i++) {
 			sum = T[i].coeff + pow(x, T[i].exp);
 		}

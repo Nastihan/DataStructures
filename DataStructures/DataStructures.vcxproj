@@ -151,10 +151,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
+    <ClInclude Include="CircularLinkedList.h" />
+    <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Matrices.h" />
+    <ClInclude Include="NodeStruct.h" />
     <ClInclude Include="Polynomial.h" />
     <ClInclude Include="SparseMatrix.h" />
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="Strings.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
