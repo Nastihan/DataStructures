@@ -7,9 +7,20 @@ private:
 	T* S;
 public:
 	// Constructor
-	Stack(int size) 
+	Stack(int size)
 		: size{ size }, top{ -1 } {
 		S = new T[size];
+	}
+	// Copy constructor
+	Stack(const Stack<T>& rhs) 
+		:size{ rhs.size }, top{ rhs.top } {
+			S = new T[size];
+			for (int i{}; i < top; i++)
+				S[i] = rhs.S[i];
+	}
+	// Move constructor
+	Stack(Stack<T>&& rhs) {
+
 	}
 	// Destructor
 	~Stack() {
@@ -57,7 +68,7 @@ public:
 		for (int i{ top }; i >= 0; i--) {
 			std::cout << S[i] << " | ";
 		}
-		std::endl;
+		std::cout << std::endl;
 	}
 	// StackTop method
 	T StackTop() {
@@ -66,5 +77,33 @@ public:
 		else
 			return S[top];
 	}
+	// IsBalance metgod for paranthesis matching
+	bool IsBalance(char C[]) {
+		// Stack created
+		Stack<char> stack(strlen(C));
+
+		// Procesing through the string
+		for (int i{}; i < strlen(C); i++) {
+			// ( pushed to stack
+			if (C[i] == '(')
+				Push(C[i]);
+			else if (C[i] == ')') {
+				// Unbalanced 
+				if (IsEmpty())
+					return false;
+				// Stack is not empty ) poped
+				else
+					Pop();
+			}
+
+		}
+		// If IsEmpty is true expression is balanced 
+		if (IsEmpty())
+			return true;
+		else
+			return false;
+
+	}
+
 
 };

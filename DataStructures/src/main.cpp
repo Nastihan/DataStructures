@@ -7,13 +7,13 @@
 #include "CircularLinkedList.h"
 #include "DoublyLinkedList.h"
 #include "Stack.h"
+#include "StackL.h"
+#include "Queue.h"
+#include "QueueL.h"
+#include "CircularQueue.h"
+#include "BinaryTree.h"
 
 int main(){
-	
-	int arr[7] {1, 3, 5, 6, 7, 8, 9};
-	int arr2[3]{ 2,6,7 };
-	LinkedList<int> list(arr, 7);
-	LinkedList<int> list2(arr2, 3);
 	
 	
 	
