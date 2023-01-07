@@ -12,9 +12,13 @@
 #include "QueueL.h"
 #include "CircularQueue.h"
 #include "BinaryTree.h"
+#include "BST.h"
+
 
 int main(){
 	
+	std::cout << "hello";
+
 	
 	
 

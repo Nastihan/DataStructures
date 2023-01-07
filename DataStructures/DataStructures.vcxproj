@@ -151,7 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
+    <ClInclude Include="AVL.h" />
     <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="BST.h" />
     <ClInclude Include="CircularLinkedList.h" />
     <ClInclude Include="CircularQueue.h" />
     <ClInclude Include="DoublyLinkedList.h" />
