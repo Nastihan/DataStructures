@@ -13,11 +13,18 @@
 #include "CircularQueue.h"
 #include "BinaryTree.h"
 #include "BST.h"
+#include "Sort.h"
 
 
 int main(){
 	
-	std::cout << "hello";
+	int A[8]{ 10,50,40,30,25,80,5,7};
+
+	Sort obj(A, 8);
+
+	obj.ShellSort();
+
+	obj.Display();
 
 	
 	

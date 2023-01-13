@@ -163,6 +163,7 @@
     <ClInclude Include="Polynomial.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="QueueL.h" />
+    <ClInclude Include="Sort.h" />
     <ClInclude Include="SparseMatrix.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="StackL.h" />
