@@ -14,17 +14,17 @@
 #include "BinaryTree.h"
 #include "BST.h"
 #include "Sort.h"
-
+#include "Chaining.h"
 
 int main(){
 	
 	int A[8]{ 10,50,40,30,25,80,5,7};
 
-	Sort obj(A, 8);
-
-	obj.ShellSort();
-
-	obj.Display();
+	Chaining H;
+	for (int i{}; i < 8; i++)
+		H.Insert(A[i]);
+	int x =H.Search(13);
+	std::cout << x;
 
 	
 	
